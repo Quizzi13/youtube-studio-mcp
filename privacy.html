@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — YouTube Studio MCP</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #5c5c5c;
+    --line: #e2e2e2;
+    --accent: #c4302b;
+    --code-bg: #f5f5f5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131313;
+      --fg: #ececec;
+      --muted: #a0a0a0;
+      --line: #2c2c2c;
+      --accent: #ff6b66;
+      --code-bg: #1e1e1e;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 3rem 1.25rem 5rem;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 44rem; margin: 0 auto; }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .35rem; letter-spacing: -.02em; }
+  h2 { font-size: 1.1rem; margin: 2.25rem 0 .6rem; letter-spacing: -.01em; }
+  .updated { color: var(--muted); font-size: .9rem; margin: 0 0 2rem; }
+  ul { padding-left: 1.25rem; }
+  li { margin: .35rem 0; }
+  code {
+    background: var(--code-bg);
+    padding: .12em .4em;
+    border-radius: 4px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: .875em;
+  }
+  a { color: var(--accent); }
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: .9rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="updated">YouTube Studio MCP · Last updated 2 September 2026</p>
+
+  <p>
+    YouTube Studio MCP ("the tool") is a personal, single-user command-line application.
+    It runs entirely on its owner's own computer. It has no servers, no backend and no
+    user accounts. This policy explains what Google user data the tool accesses and what
+    happens to it.
+  </p>
+
+  <h2>What data the tool accesses</h2>
+  <p>
+    After the owner signs in with Google and grants consent, the tool can call the YouTube
+    Data API v3, the YouTube Analytics API and the YouTube Reporting API on behalf of that
+    Google Account. Through these APIs it can read:
+  </p>
+  <ul>
+    <li>channel and video metadata belonging to the authorising account</li>
+    <li>aggregate performance statistics: views, watch time, subscriber changes</li>
+    <li>aggregate audience data: retention curves, traffic sources, age and gender bands, country-level geography</li>
+    <li>revenue reports, where the channel participates in the YouTube Partner Program</li>
+    <li>comments on the authorising account's videos</li>
+  </ul>
+  <p>
+    All audience data provided by the YouTube Analytics API is aggregated and anonymous.
+    The tool does not receive, and cannot request, the identity of individual viewers.
+  </p>
+  <p>
+    The tool can also write to the authorising account's own channels — upload videos,
+    edit video metadata, manage playlists and post comments — when the owner explicitly
+    asks it to.
+  </p>
+  <p>
+    The tool cannot access channels the authorising account does not own, and it does not
+    read Gmail, Drive, Contacts, Calendar or any other Google service.
+  </p>
+
+  <h2>How the data is used</h2>
+  <p>
+    Data is used solely to answer the owner's own questions about their own channels, at the
+    moment they ask them. It is not used for advertising, profiling, training machine-learning
+    models, or any purpose unrelated to the tool's stated function.
+  </p>
+
+  <h2>How the data is stored</h2>
+  <p>
+    API responses are not persisted. They are displayed and discarded.
+  </p>
+  <p>
+    The one thing stored on disk is the OAuth credential: an access token and a refresh
+    token, written to <code>token.json</code> in a per-channel folder under the owner's home
+    directory on their own machine. These files never leave that machine.
+  </p>
+
+  <h2>How the data is shared</h2>
+  <p>
+    It is not shared. No data is transmitted to the developer, to any analytics provider, or
+    to any other third party. The only network connections the tool makes are to Google's own
+    API endpoints.
+  </p>
+
+  <h2>Retention and deletion</h2>
+  <p>
+    Because nothing is retained beyond the stored OAuth credential, deletion is a matter of
+    removing that credential. Deleting the <code>token.json</code> file removes the tool's
+    access immediately.
+  </p>
+
+  <h2>Revoking access</h2>
+  <p>
+    Access granted to this tool can be withdrawn at any time from
+    <a href="https://myaccount.google.com/permissions">Google Account permissions</a>. Once
+    revoked, the stored token stops working and the tool loses all access.
+  </p>
+
+  <h2>Limited Use disclosure</h2>
+  <p>
+    The tool's use of information received from Google APIs adheres to the
+    <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+    including its Limited Use requirements.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    Questions about this policy: <a href="mailto:postavnoyvlad@gmail.com">postavnoyvlad@gmail.com</a>
+  </p>
+
+  <footer>
+    <a href="index.html">← YouTube Studio MCP</a>
+  </footer>
+</main>
+</body>
+</html>
